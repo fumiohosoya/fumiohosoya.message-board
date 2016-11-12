@@ -1,5 +1,15 @@
+<link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+    <!-- jQuery読み込み -->
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+    <!-- BootstrapのJS読み込み -->
+    <script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+　　<link rel="stylesheet"  href="about.css">
 
-
+<division class="panel panel-default">
+ <div class="panel-heading>
+  メッセージ一覧
+  </div>
+<Textarea class="form control" rows"3">
 
 <%= form_for(@message) do |f| %>
  <% if @message.errors.present? %>
@@ -14,13 +24,16 @@
    </ul>
   </div>
 <% end %>
+</textarea>
 
-
+<Textarea class="form control" rows"3">
  名前：
  <%= f.text_field :name %>
- 
+ </textaera>
+
  内容：
  <%= f.text_field :body %>
- <%= f.submit class: "btn btn-sm btn-primary" %>
+ <div class="col-sm-offset-2 col-sm-10">
+ <button type= "submit" class: "btn btn-lg btn-primary" %>
 <% end %>
 
