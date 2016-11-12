@@ -4,15 +4,12 @@
   </div>
   
   <div class="panel-body">
-   <% @messages.each do |messeage| %>
+   <% @messages.each do |message| %>
     <span class="label label-info"><%= message.name %></span>
     <%= message.body %>
     <br>
-    <% end %>
-    </div>
-    </div>
-    
-＜% 部分テンプレートを読み込んでいる %>
+   <% end %>
+  </div>
+ </div>
+ <% #部分テンプレートを読み込んでいる %>
 <%= render 'form' %>
-
-  
