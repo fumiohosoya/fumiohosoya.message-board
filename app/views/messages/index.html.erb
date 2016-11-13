@@ -16,18 +16,21 @@
  <div class="form-group">
   <%= f.label :name, "名前：", class:'col-sm-2 control-label' %>
   <div class="col-sm-10">
-   <%= f.text_field :name, class:'form-control' %>
+   <%= f.text_area :name, class:'form-control' %>
   </div>
  </div>
- 
-  <label for="内容" class="col-sm-2 control label">内容</label>
+<%= form_for(@message, html:{class:'form-horizontal'}) do |f| %> 
+  <div class="form-group">
+  <%= f.lable :body, "内容: ",  class:'col-sm-2 control label' %>
+  <div class+"col-sm-10">
   <%= f.text_area :body, class:'form-control' %>
+  </div>
+ </div>
 
-
+<%= form_for(@message, html:{class:'form-horizontal'}) do |f| %> 
  <div class="form-group">
-  <div class="col-sm-10 col-sm-offset-2">
+  <div class="col-sm-10-2">
   <%= f.submit class: "btn btn-sm btn-primary" %>
   </div>
  </div>
 <% end %>
-
